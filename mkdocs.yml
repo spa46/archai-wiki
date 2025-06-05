@@ -1,0 +1,16 @@
+site_name: Architecture & AI Wiki
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Software Architecture:
+      - Overview: software-architecture/index.md
+      - Design Principles: software-architecture/design-principles.md
+      - Patterns:
+          - Microservices: software-architecture/patterns/microservices.md
+          - Layered: software-architecture/patterns/layered.md
+  - AI:
+      - Overview: ai/index.md
+  - Blog:
+      - 2025-06-03: blog/2025-06-03-my-thoughts-on-llm-architecture.md
+      - 2025-06-01: blog/2025-06-01-why-event-driven-architecture-scales.md
