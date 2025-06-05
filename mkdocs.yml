@@ -12,5 +12,4 @@ nav:
   - AI:
       - Overview: ai/index.md
   - Blog:
-      - 2025-06-03: blog/2025-06-03-my-thoughts-on-llm-architecture.md
       - 2025-06-01: blog/2025-06-01-why-event-driven-architecture-scales.md
