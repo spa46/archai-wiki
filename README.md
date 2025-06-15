@@ -13,4 +13,4 @@ Personal Wiki of Software Architecture and AI
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
 
-
+### Site - https://spa46.github.io/archai-wiki/
