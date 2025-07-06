@@ -1,82 +1,122 @@
 # Prompt Engineering
 
-> **Review:**
-> This page provides a comprehensive and practical introduction to prompt engineering for AI language models. It covers the definition of prompts, core goals, key principles, prompt styles, common pitfalls, and iteration strategies. The use of examples and actionable tips makes it accessible for both beginners and intermediate users. The "before & after" example is especially effective for illustrating best practices. Consider expanding with more advanced techniques or real-world case studies in the future.
 
 ---
 
 ## What is a Prompt?
-A prompt is the input or instruction given to a language model. It can be a question, a command, or even a few words to start a conversation or generate content.
+- **Structuring inputs (questions or commands)** to guide an AI model to produce accurate and relevant output.
+- Helps reduce hallucinations, bias, and vague answers.
+- Useful for anyone working with AI: developers, researchers, content creators, and more.
 
 ---
 
 ## Why Prompt Engineering Matters
-Prompt engineering is the practice of crafting effective prompts to guide the behavior of AI language models. The main goals are:
-- Improve the accuracy and relevance of AI responses
-- Minimize hallucinations (AI-generated false information)
+Prompt engineering means crafting prompts to guide AI models. The main goals:
+- Improve accuracy and relevance of responses
+- Minimize hallucinations (false information)
 - Reduce ambiguity in instructions
-- Maximize creative or insightful results when desired
+- Encourage creative or insightful results when needed
 
 ---
 
 ## Principles of Good Prompt Engineering
-Follow these principles to create effective prompts:
-
-- **Clarity**: Be specific and unambiguous with your instructions.
-- **Context**: Provide background information if needed.
-- **Structure**: Use bullet points, lists, or clear formatting to organize your prompt.
-- **Examples**: Show examples of what you want the AI to produce.
-- **Role Play**: Ask the AI to "act as" an expert, teacher, or specific persona if relevant.
-
----
-
-## Types of Prompts
-
-1. **Instructional Prompt**  
-   Example: `Summarize this article in 3 bullet points.`
-
-2. **Few-shot Example Prompt**  
-   Example: `Translate the following: 'Hello' → 'Hola', 'Goodbye' → 'Adiós'. Translate: 'Thank you' → ?`
-
-3. **Role-based Prompt**  
-   Example: `You are an English grammar expert. Correct the following sentence...`
+Use these principles for better prompts:
+- **Clarity**: Be specific and unambiguous.
+- **Context**: Give background if needed.
+- **Structure**: Use lists or clear formatting.
+- **Examples**: Show what you want the AI to produce.
+- **Role Play**: Ask the AI to act as an expert or persona if helpful.
 
 ---
 
-## Avoiding Common Pitfalls
+## Tips for Better Prompts
 
-| Common Issue    | How to Fix                       |
-|-----------------|----------------------------------|
-| Too vague       | Add details or constraints       |
-| Unclear task    | Explain the expected output      |
-| Overly long     | Break complex prompts into steps |
+1. **Be clear and specific**  
+   > Bad: "Tell me about plants."  
+   > Good: "What are the benefits of growing lettuce in a hydroponic NFT system indoors?"
+
+   Include relevant **context, constraints, or goals** in your prompt.
+
+2. **Provide a role or perspective (optional but powerful)**  
+   > "Act as a data scientist.  
+   > Can you explain how to fine-tune a transformer model using PyTorch?"  
+
+   This helps the AI simulate a more **accurate tone** or **specialist mindset**.
+
+3. **Break complex queries into steps**  
+   > "I want to write a research paper.  
+   > First, help me outline the key sections, then we can work on each section together."  
+
+   Chunking improves focus and minimizes confusion.
+
+4. **Set the format you want**  
+   > "Give me a bullet-point summary."  
+   > "Write it as a table with columns: Feature | Description | Pros | Cons."  
+
+   This keeps answers structured and easy to digest.
+
+5. **Use examples for clarification**  
+   > "I want my writing to sound like this: 'The sunset poured gold over the quiet hills.'  
+   > Can you improve my paragraph to match that style?"  
+
+   Examples reduce hallucination and improve alignment with your intention.
+
+6. **Specify what you don't want**  
+   > "Don't include historical background — just focus on current applications of AI in healthcare."  
+
+   This prevents unnecessary or off-topic output.
+
+7. **Iterate and refine**  
+   > Ask, review, then say:  
+   > "This is close, but could you make it more formal / concise / technical?"  
+
+   You don't have to get the perfect prompt the first time — **interactive refinement** is key.
 
 ---
 
-## Iteration is Key
+## Pitfalls to Avoid
+
+| Common Issue    | How to Fix                 |
+|-----------------|---------------------------|
+| Too vague       | Add details or constraints |
+| Unclear task    | Explain expected output    |
+| Overly long     | Break into steps           |
+
+---
+
+## Improving Your Prompts
 Prompt engineering is experimental. You may need to:
-- Rewrite the prompt from another perspective
-- Add constraints (such as word count or tone)
-- Remove unnecessary context
+- Rewrite from a new perspective
+- Add constraints (e.g., word count, tone)
+- Remove extra context
 
-Test and revise your prompts to get the best results.
+Test and revise your prompts for best results.
 
 ---
 
 ## Further Tips
-- Use markdown formatting (if supported) to structure prompts and outputs.
+- Use markdown formatting to structure prompts and outputs.
 - Chain prompts: use one output as input for the next task.
 - Ask the AI to explain its reasoning if you need clarity.
 
 ---
 
-## Example - Before & After
+## Example Transformation
 
-**Bad Prompt**  
-> Tell me about Paris.
+| Type           | Prompt Example |
+| -------------- | -------------- |
+| **Too vague** | "Tell me about AI" |
+| **Better**    | "Explain how AI is used in fraud detection in financial institutions." |
+| **Best**      | "Act as a security engineer.<br>Explain how machine learning helps detect fraud in banking systems,<br>including common algorithms and real-world challenges." |
 
-**Better Prompt**  
-> Give me a brief travel guide to Paris for first-time visitors, including top 3 attractions, best time to visit, and one local food to try.
+---
+
+## How to Reduce Hallucinations
+
+- Ask for sources, assumptions, or step-by-step reasoning.
+  - Example: "Can you give me a step-by-step explanation of how you arrived at this answer?"
+- Request external verification if accuracy is critical.
+- Avoid vague or open-ended questions unless you're brainstorming.
 
 ---
 
@@ -85,3 +125,12 @@ Test and revise your prompts to get the best results.
 - Few-shot Learning
 - Zero-shot Prompting
 - Chain-of-Thought Prompting
+
+---
+
+## References
+
+- [OpenAI Cookbook: Prompt Engineering](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md)
+- [DeepLearning.AI: Prompt Engineering Guide](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
+- [Google: Prompt Design](https://cloud.google.com/vertex-ai/docs/generative-ai/learn/prompt-design)
+- [Prompt Engineering for AI Agents](https://www.oreilly.com/library/view/prompt-engineering-for/9781098153427/ch01.html)
