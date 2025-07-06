@@ -12,7 +12,7 @@
         <link rel="prev" href="../../software-architecture/patterns/layered/">
       
       
-        <link rel="next" href="../../blog/2025-06-01-why-event-driven-architecture-scales/">
+        <link rel="next" href="../types-of-prompts/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -607,6 +607,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types-of-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Types of Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -856,76 +879,88 @@
 <p>For detailed definitions and examples, see <a href="../types-of-prompts/">Types of Prompts</a>.</p>
 <hr />
 <h2 id="why-prompt-engineering-matters">Why Prompt Engineering Matters</h2>
-<p>Prompt engineering means crafting prompts to guide AI models. The main goals:
-- Improve accuracy and relevance of responses
-- Minimize hallucinations (false information)
-- Reduce ambiguity in instructions
-- Encourage creative or insightful results when needed</p>
+<p>Prompt engineering means crafting prompts to guide AI models. The main goals:</p>
+<ul>
+<li>Improve accuracy and relevance of responses</li>
+<li>Minimize hallucinations (false information)</li>
+<li>Reduce ambiguity in instructions</li>
+<li>Encourage creative or insightful results when needed</li>
+</ul>
 <hr />
 <h2 id="principles-of-good-prompt-engineering">Principles of Good Prompt Engineering</h2>
-<p>Use these principles for better prompts:
-- <strong>Clarity</strong>: Be specific and unambiguous.
-- <strong>Context</strong>: Give background if needed.
-- <strong>Structure</strong>: Use lists or clear formatting.
-- <strong>Examples</strong>: Show what you want the AI to produce.
-- <strong>Role Play</strong>: Ask the AI to act as an expert or persona if helpful.</p>
+<p>Use these principles for better prompts:</p>
+<ul>
+<li><strong>Clarity</strong>: Be specific and unambiguous.</li>
+<li><strong>Context</strong>: Give background if needed.</li>
+<li><strong>Structure</strong>: Use lists or clear formatting.</li>
+<li><strong>Examples</strong>: Show what you want the AI to produce.</li>
+<li><strong>Role Play</strong>: Ask the AI to act as an expert or persona if helpful.</li>
+</ul>
 <hr />
 <h2 id="tips-for-better-prompts">Tips for Better Prompts</h2>
 <ol>
-<li><strong>Be clear and specific</strong>  <blockquote>
+<li>
+<p><strong>Be clear and specific</strong>  </p>
+<blockquote>
 <p>Bad: "Tell me about plants."<br />
 Good: "What are the benefits of growing lettuce in a hydroponic NFT system indoors?"</p>
 </blockquote>
-</li>
-</ol>
 <p>Include relevant <strong>context, constraints, or goals</strong> in your prompt.</p>
-<ol>
-<li><strong>Provide a role or perspective (optional but powerful)</strong>  <blockquote>
+<p><br/></p>
+</li>
+<li>
+<p><strong>Provide a role or perspective (optional but powerful)</strong>  </p>
+<blockquote>
 <p>"Act as a data scientist.<br />
 Can you explain how to fine-tune a transformer model using PyTorch?"  </p>
 </blockquote>
-</li>
-</ol>
 <p>This helps the AI simulate a more <strong>accurate tone</strong> or <strong>specialist mindset</strong>.</p>
-<ol>
-<li><strong>Break complex queries into steps</strong>  <blockquote>
+<p><br/></p>
+</li>
+<li>
+<p><strong>Break complex queries into steps</strong>  </p>
+<blockquote>
 <p>"I want to write a research paper.<br />
 First, help me outline the key sections, then we can work on each section together."  </p>
 </blockquote>
-</li>
-</ol>
 <p>Chunking improves focus and minimizes confusion.</p>
-<ol>
-<li><strong>Set the format you want</strong>  <blockquote>
+<p><br/></p>
+</li>
+<li>
+<p><strong>Set the format you want</strong>  </p>
+<blockquote>
 <p>"Give me a bullet-point summary."<br />
 "Write it as a table with columns: Feature | Description | Pros | Cons."  </p>
 </blockquote>
-</li>
-</ol>
 <p>This keeps answers structured and easy to digest.</p>
-<ol>
-<li><strong>Use examples for clarification</strong>  <blockquote>
+<p><br/></p>
+</li>
+<li>
+<p><strong>Use examples for clarification</strong>  </p>
+<blockquote>
 <p>"I want my writing to sound like this: 'The sunset poured gold over the quiet hills.'<br />
 Can you improve my paragraph to match that style?"  </p>
 </blockquote>
-</li>
-</ol>
 <p>Examples reduce hallucination and improve alignment with your intention.</p>
-<ol>
-<li><strong>Specify what you don't want</strong>  <blockquote>
+<p><br/></p>
+</li>
+<li>
+<p><strong>Specify what you don't want</strong>  </p>
+<blockquote>
 <p>"Don't include historical background — just focus on current applications of AI in healthcare."  </p>
 </blockquote>
-</li>
-</ol>
 <p>This prevents unnecessary or off-topic output.</p>
-<ol>
-<li><strong>Iterate and refine</strong>  <blockquote>
+<p><br/></p>
+</li>
+<li>
+<p><strong>Iterate and refine</strong>  </p>
+<blockquote>
 <p>Ask, review, then say:<br />
 "This is close, but could you make it more formal / concise / technical?"  </p>
 </blockquote>
+<p>You don't have to get the perfect prompt the first time — <strong>interactive refinement</strong> is key.</p>
 </li>
 </ol>
-<p>You don't have to get the perfect prompt the first time — <strong>interactive refinement</strong> is key.</p>
 <hr />
 <h2 id="pitfalls-to-avoid">Pitfalls to Avoid</h2>
 <table>
@@ -952,10 +987,12 @@ Can you improve my paragraph to match that style?"  </p>
 </table>
 <hr />
 <h2 id="improving-your-prompts">Improving Your Prompts</h2>
-<p>Prompt engineering is experimental. You may need to:
-- Rewrite from a new perspective
-- Add constraints (e.g., word count, tone)
-- Remove extra context</p>
+<p>Prompt engineering is experimental. You may need to:</p>
+<ul>
+<li>Rewrite from a new perspective</li>
+<li>Add constraints (e.g., word count, tone)</li>
+<li>Remove extra context</li>
+</ul>
 <p>Test and revise your prompts for best results.</p>
 <hr />
 <h2 id="further-tips">Further Tips</h2>
