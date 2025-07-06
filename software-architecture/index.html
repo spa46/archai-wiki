@@ -43,6 +43,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -852,8 +854,7 @@
 </li>
 <li><strong>Example</strong>: A class diagram showing how classes are organized into packages.</li>
 </ul>
-<pre><code class="language-mermaid">
-classDiagram
+<pre class="mermaid"><code>classDiagram
     class AuthModule
     class UserModule
     class OrderModule
@@ -861,8 +862,7 @@ classDiagram
 
     AuthModule &lt;|-- UserModule : uses
     UserModule &lt;|-- OrderModule : uses
-    OrderModule &lt;|-- PaymentModule : uses
-</code></pre>
+    OrderModule &lt;|-- PaymentModule : uses</code></pre>
 <h3 id="2-component-and-connector-view-cc-view">2. Component-and-Connector View (C&amp;C View)</h3>
 <ul>
 <li><strong>What it shows</strong>: The dynamic structure of the system as a set of components (units of computation) and connectors (interaction mechanisms).</li>
@@ -875,15 +875,14 @@ classDiagram
 </li>
 <li><strong>Example</strong>: A diagram showing how services communicate over a network.</li>
 </ul>
-<pre><code class="language-mermaid">flowchart LR
+<pre class="mermaid"><code>flowchart LR
     ClientApp --&gt;|REST API| APIGateway
     APIGateway --&gt;|gRPC| UserService
     APIGateway --&gt;|gRPC| OrderService
     OrderService --&gt;|Event| PaymentService
     UserService --&gt;|DB| UserDB[(User Database)]
     OrderService --&gt;|DB| OrderDB[(Order Database)]
-    PaymentService --&gt;|DB| PaymentDB[(Payment Database)]
-</code></pre>
+    PaymentService --&gt;|DB| PaymentDB[(Payment Database)]</code></pre>
 <h3 id="3-allocation-view">3. Allocation View</h3>
 <ul>
 <li><strong>What it shows</strong>: The mapping of software elements to the environment, such as hardware, file systems, or teams.</li>
@@ -896,7 +895,7 @@ classDiagram
 </li>
 <li><strong>Example</strong>: A deployment diagram mapping software components to servers.</li>
 </ul>
-<pre><code class="language-mermaid">graph TD
+<pre class="mermaid"><code>graph TD
     subgraph AWS_Cloud[Cloud Provider]
         subgraph VPC[Virtual Private Cloud]
             subgraph Public_Subnet
@@ -917,33 +916,7 @@ classDiagram
     App1 --&gt; DB
     App2 --&gt; DB
     App1 --&gt; Cache
-    App2 --&gt; Cache
-</code></pre>
-<pre><code class="language-mermaid">graph TD
-    subgraph DMZ
-        LB[Load Balancer]
-    end
-    subgraph App_Tier
-        WS1[Web Server 1]
-        WS2[Web Server 2]
-        AS1[App Server 1]
-        AS2[App Server 2]
-    end
-    subgraph Data_Tier
-        DB1[(Database Server 1)]
-        DB2[(Database Server 2)]
-        FS[(File Storage)]
-    end
-
-    LB --&gt; WS1
-    LB --&gt; WS2
-    WS1 --&gt; AS1
-    WS2 --&gt; AS2
-    AS1 --&gt; DB1
-    AS2 --&gt; DB2
-    DB1 --&gt; FS
-    DB2 --&gt; FS
-</code></pre>
+    App2 --&gt; Cache</code></pre>
 <p><br/></p>
 <h2 id="rup-41-views">RUP 4+1 Views</h2>
 <p>RUP uses the "4+1" View Model, which consists of five views:</p>
@@ -959,17 +932,16 @@ classDiagram
 </li>
 <li><strong>Example</strong>: A class diagram showing how classes are organized into packages.</li>
 </ul>
-<pre><code class="language-mermaid">classDiagram
+<pre class="mermaid"><code>classDiagram
     class User
     class Order
     class Product
     class ShoppingCart
 
-    User &quot;1&quot; -- &quot;*&quot; Order : places
-    Order &quot;*&quot; -- &quot;*&quot; Product : contains
-    User &quot;1&quot; -- &quot;1&quot; ShoppingCart : owns
-    ShoppingCart &quot;*&quot; -- &quot;*&quot; Product : holds
-</code></pre>
+    User "1" -- "*" Order : places
+    Order "*" -- "*" Product : contains
+    User "1" -- "1" ShoppingCart : owns
+    ShoppingCart "*" -- "*" Product : holds</code></pre>
 <h3 id="2-development-view-implementation-view">2. Development View (Implementation View)</h3>
 <ul>
 <li><strong>What it shows</strong>: The static organization of the software in the development environment (e.g., module structure).</li>
@@ -982,7 +954,7 @@ classDiagram
 </li>
 <li><strong>Example</strong>: A class diagram showing how classes are organized into packages.</li>
 </ul>
-<pre><code class="language-mermaid">graph TD
+<pre class="mermaid"><code>graph TD
     subgraph src
         subgraph controllers
             UserController
@@ -1009,8 +981,7 @@ classDiagram
     OrderService --&gt; OrderRepository
     UserService --&gt; UserModel
     OrderService --&gt; OrderModel
-    OrderModel --&gt; ProductModel
-</code></pre>
+    OrderModel --&gt; ProductModel</code></pre>
 <h3 id="3-process-view">3. Process View</h3>
 <ul>
 <li><strong>What it shows</strong>: The dynamic aspects of the system, such as processes and their interactions.</li>
@@ -1023,7 +994,7 @@ classDiagram
 </li>
 <li><strong>Example</strong>: A class diagram showing how classes are organized into packages.</li>
 </ul>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid"><code>sequenceDiagram
     participant User
     participant WebApp
     participant OrderService
@@ -1037,8 +1008,7 @@ classDiagram
     PaymentGateway--&gt;&gt;OrderService: Payment confirmation
     InventoryService--&gt;&gt;OrderService: Reservation confirmation
     OrderService-&gt;&gt;WebApp: Order confirmation
-    WebApp-&gt;&gt;User: Show confirmation
-</code></pre>
+    WebApp-&gt;&gt;User: Show confirmation</code></pre>
 <h3 id="4-physical-view-deployment-view">4. Physical View (Deployment View)</h3>
 <ul>
 <li><strong>What it shows</strong>: The mapping of software onto hardware and the physical distribution of components.</li>
@@ -1051,7 +1021,7 @@ classDiagram
 </li>
 <li><strong>Example</strong>: A class diagram showing how classes are organized into packages.</li>
 </ul>
-<pre><code class="language-mermaid">flowchart TD
+<pre class="mermaid"><code>flowchart TD
     subgraph Internet
         UserClient
     end
@@ -1084,8 +1054,7 @@ classDiagram
     App1 --&gt; FS
     App2 --&gt; FS
     App1 --&gt; Cache
-    App2 --&gt; Cache 
-</code></pre>
+    App2 --&gt; Cache </code></pre>
 <h3 id="5-use-case-view-1-view">5. Use Case View ("+1" View)</h3>
 <ul>
 <li><strong>What it shows</strong>: The scenarios and use cases that drive the architecture.</li>
@@ -1098,14 +1067,13 @@ classDiagram
 </li>
 <li><strong>Example</strong>: A class diagram showing how classes are organized into packages.</li>
 </ul>
-<pre><code class="language-mermaid">flowchart TD
+<pre class="mermaid"><code>flowchart TD
     User((User)) --&gt;|Login| AuthSystem
     User --&gt;|Browse| Catalog
     User --&gt;|Add to Cart| ShoppingCart
     User --&gt;|Checkout| OrderSystem
     OrderSystem --&gt;|Payment| PaymentGateway
-    OrderSystem --&gt;|Inventory Check| InventorySystem
-</code></pre>
+    OrderSystem --&gt;|Inventory Check| InventorySystem</code></pre>
 <h2 id="summary-table">Summary Table</h2>
 <table>
 <thead>
