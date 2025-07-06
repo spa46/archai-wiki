@@ -28,6 +28,7 @@ For detailed definitions and examples, see [Types of Prompts](types-of-prompts.m
 
 ## Why Prompt Engineering Matters
 Prompt engineering means crafting prompts to guide AI models. The main goals:
+
 - Improve accuracy and relevance of responses
 - Minimize hallucinations (false information)
 - Reduce ambiguity in instructions
@@ -37,6 +38,7 @@ Prompt engineering means crafting prompts to guide AI models. The main goals:
 
 ## Principles of Good Prompt Engineering
 Use these principles for better prompts:
+
 - **Clarity**: Be specific and unambiguous.
 - **Context**: Give background if needed.
 - **Structure**: Use lists or clear formatting.
@@ -51,42 +53,55 @@ Use these principles for better prompts:
    > Bad: "Tell me about plants."  
    > Good: "What are the benefits of growing lettuce in a hydroponic NFT system indoors?"
 
-   Include relevant **context, constraints, or goals** in your prompt.
+      Include relevant **context, constraints, or goals** in your prompt.
+      
+      <br/>
+
 
 2. **Provide a role or perspective (optional but powerful)**  
    > "Act as a data scientist.  
    > Can you explain how to fine-tune a transformer model using PyTorch?"  
 
-   This helps the AI simulate a more **accurate tone** or **specialist mindset**.
+      This helps the AI simulate a more **accurate tone** or **specialist mindset**.
+
+      <br/>
 
 3. **Break complex queries into steps**  
    > "I want to write a research paper.  
    > First, help me outline the key sections, then we can work on each section together."  
 
-   Chunking improves focus and minimizes confusion.
+      Chunking improves focus and minimizes confusion.
+
+      <br/>
 
 4. **Set the format you want**  
    > "Give me a bullet-point summary."  
    > "Write it as a table with columns: Feature | Description | Pros | Cons."  
 
-   This keeps answers structured and easy to digest.
+      This keeps answers structured and easy to digest.
+
+      <br/>
 
 5. **Use examples for clarification**  
    > "I want my writing to sound like this: 'The sunset poured gold over the quiet hills.'  
    > Can you improve my paragraph to match that style?"  
 
-   Examples reduce hallucination and improve alignment with your intention.
+      Examples reduce hallucination and improve alignment with your intention.
+
+      <br/>
 
 6. **Specify what you don't want**  
    > "Don't include historical background — just focus on current applications of AI in healthcare."  
 
-   This prevents unnecessary or off-topic output.
+      This prevents unnecessary or off-topic output.
+
+      <br/>
 
 7. **Iterate and refine**  
    > Ask, review, then say:  
    > "This is close, but could you make it more formal / concise / technical?"  
 
-   You don't have to get the perfect prompt the first time — **interactive refinement** is key.
+      You don't have to get the perfect prompt the first time — **interactive refinement** is key.
 
 ---
 
@@ -102,6 +117,7 @@ Use these principles for better prompts:
 
 ## Improving Your Prompts
 Prompt engineering is experimental. You may need to:
+
 - Rewrite from a new perspective
 - Add constraints (e.g., word count, tone)
 - Remove extra context
