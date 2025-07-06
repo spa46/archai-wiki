@@ -1,6 +1,15 @@
 site_name: Architecture & AI Wiki
 theme:
   name: material
+  custom_dir: docs/stylesheets
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Home: index.md
   - Software Architecture:
