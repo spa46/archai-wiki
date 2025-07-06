@@ -10,6 +10,22 @@
 
 ---
 
+## Types of Prompts
+There are several common types of prompts used with AI language models:
+
+- **Zero-shot Prompting**: Give the model a task without examples.
+- **Few-shot Prompting**: Show the model a few examples to guide its responses.
+- **Chain-of-thought Prompting**: Ask the model to reason step-by-step.
+- **Instruction-based Prompting**: Provide clear, structured instructions.
+- **Role-based Prompting**: Assign a role or persona to the model.
+- **Contextual or Dynamic Prompting**: Insert relevant background/context before the question.
+- **Multi-turn Prompting**: Build context across a conversation.
+- **Prompt Chaining (Modular Prompting)**: Break tasks into smaller steps, using outputs as new inputs.
+
+For detailed definitions and examples, see [Types of Prompts](types-of-prompts.md).
+
+---
+
 ## Why Prompt Engineering Matters
 Prompt engineering means crafting prompts to guide AI models. The main goals:
 - Improve accuracy and relevance of responses
