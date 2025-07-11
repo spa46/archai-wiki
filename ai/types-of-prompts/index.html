@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../prompt-engineering/">
+        <link rel="prev" href="../context-engineering/">
       
       
-        <link rel="next" href="../../blog/2025-06-01-why-event-driven-architecture-scales/">
+        <link rel="next" href="../model-context-protocols/overview/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -461,6 +461,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../context-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -588,6 +611,121 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Model Context Protocols
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Model Context Protocols
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-context-protocols/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-context-protocols/use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-context-protocols/Sample%20AI-Application-with-MCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample AI Application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -787,16 +925,17 @@
 <p>This page describes common types of prompts used with AI language models. Each type includes a definition, example, and when to use it.</p>
 <hr />
 <h2 id="1-zero-shot-prompting">1. Zero-shot Prompting</h2>
-<p><strong>What it is:</strong> You give the model a task without examples.</p>
+<p>Ask the model to perform a task without providing any examples.</p>
+<p><strong>Use:</strong> Simple or well-known tasks.</p>
 <p><strong>Example</strong>  </p>
 <blockquote>
 <p>Q: Translate this sentence into French: I love pizza.<br />
 A: J'adore la pizza.</p>
 </blockquote>
-<p><strong>When to use:</strong> Simple or well-known tasks.</p>
 <hr />
 <h2 id="2-few-shot-prompting">2. Few-shot Prompting</h2>
-<p><strong>What it is:</strong> You show the model a few examples of how you want it to respond.</p>
+<p>Show a handful of examples to illustrate the desired pattern or response.</p>
+<p><strong>Use:</strong> To guide the model with patterns.</p>
 <p><strong>Example</strong>  </p>
 <blockquote>
 <p>Q:<br />
@@ -806,43 +945,46 @@ Translate into French:<br />
 – He is tired. →<br />
 A: Il est fatigué.</p>
 </blockquote>
-<p><strong>When to use:</strong> To guide the model with patterns.</p>
 <hr />
 <h2 id="3-chain-of-thought-prompting">3. Chain-of-thought Prompting</h2>
-<p><strong>What it is:</strong> You explicitly ask the model to reason step-by-step.</p>
+<p>Encourage the model to reason through problems step-by-step and make its thinking process explicit.</p>
+<p><strong>Use:</strong> Math, logic, and complex reasoning.</p>
 <p><strong>Example</strong>  </p>
 <blockquote>
 <p>Q: If a train leaves the station at 3 PM and travels for 2 hours, what time does it arrive? Let's think step by step.<br />
 A: The train leaves at 3 PM. It travels for 2 hours. 3 PM plus 2 hours is 5 PM. So, the train arrives at 5 PM.</p>
 </blockquote>
-<p><strong>When to use:</strong> Math, logic, and complex reasoning.</p>
+<p><strong>Use:</strong> Math, logic, and complex reasoning.</p>
 <hr />
 <h2 id="4-instruction-based-prompting">4. Instruction-based Prompting</h2>
-<p><strong>What it is:</strong> You give very clear, structured instructions.</p>
+<p>Give clear, structured directions for the model to follow.</p>
+<p><strong>Use:</strong> For high precision or consistent format.</p>
 <p><strong>Example</strong>  </p>
 <blockquote>
 <p>Q: Summarize this paragraph in 2 sentences focusing only on the main idea.<br />
 A: The paragraph discusses the importance of teamwork in achieving goals. It emphasizes that collaboration leads to better results than working alone.</p>
 </blockquote>
-<p><strong>When to use:</strong> For high precision or consistent format.</p>
+<p><strong>Use:</strong> For high precision or consistent format.</p>
 <hr />
 <h2 id="5-role-based-prompting">5. Role-based Prompting</h2>
-<p><strong>What it is:</strong> You assign a role or persona to the model.</p>
+<p>Assign a specific role or persona to shape the response style or expertise.</p>
+<p><strong>Use:</strong> To match tone, expertise, or audience.</p>
 <p><strong>Example</strong>  </p>
 <blockquote>
 <p>Q: You are a professional lawyer. Explain this legal term in simple language: "Habeas Corpus".<br />
 A: "Habeas Corpus" is a legal term that means a person has the right to be brought before a judge if they are being held in jail, to make sure their detention is lawful.</p>
 </blockquote>
-<p><strong>When to use:</strong> To match tone, expertise, or audience.</p>
+<p><strong>Use:</strong> To match tone, expertise, or audience.</p>
 <hr />
 <h2 id="6-contextual-or-dynamic-prompting">6. Contextual or Dynamic Prompting</h2>
-<p><strong>What it is:</strong> You insert relevant background/context before the question.</p>
+<p>Provide relevant background information or context before asking the main question.</p>
+<p><strong>Use:</strong> When the task depends heavily on prior information.</p>
 <p><strong>Example</strong>  </p>
 <blockquote>
 <p>Q: In the context of European history during the 19th century, explain the causes of the French Revolution.<br />
 A: The French Revolution was caused by social inequality, economic hardship, and the influence of Enlightenment ideas, which led people to demand more rights and a fairer government.</p>
 </blockquote>
-<p><strong>When to use:</strong> When the task depends heavily on prior information.</p>
+<p><strong>Use:</strong> When the task depends heavily on prior information.</p>
 <hr />
 <h2 id="7-multi-turn-prompting">7. Multi-turn Prompting</h2>
 <p><strong>What it is:</strong> Building context across a conversation.</p>
@@ -853,7 +995,7 @@ A: (Turn 1) That sounds wonderful! What cities in Italy are you interested in vi
 Q: (Turn 2) I'm interested in Rome and Venice. What are the must-see attractions?<br />
 A: (Turn 2) In Rome, you should visit the Colosseum, the Vatican, and the Trevi Fountain. In Venice, don't miss St. Mark's Basilica, the Grand Canal, and a gondola ride.</p>
 </blockquote>
-<p><strong>When to use:</strong> For dialogue, memory-based reasoning, tutoring, etc.</p>
+<p><strong>Use:</strong> For dialogue, memory-based reasoning, tutoring, etc.</p>
 <hr />
 <h2 id="8-prompt-chaining-modular-prompting">8. Prompt Chaining (Modular Prompting)</h2>
 <p><strong>What it is:</strong> Breaking tasks into smaller steps and using the output of one as the input of the next.</p>
@@ -866,7 +1008,7 @@ A (Step 2):<br />
 - March 3, 2022: The conference was held.<br />
 - July 15, 2023: The next meeting is scheduled.</p>
 </blockquote>
-<p><strong>When to use:</strong> For complex tasks like code generation, document parsing, etc. </p>
+<p><strong>Use:</strong> For complex tasks like code generation, document parsing, etc. </p>
 
 
 
