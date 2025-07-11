@@ -19,6 +19,11 @@ nav:
           - Layered: software-architecture/patterns/layered.md
   - AI:
       - Prompt Engineering: ai/prompt-engineering.md
+      - Context Engineering: ai/context-engineering.md
       - Types of Prompts: ai/types-of-prompts.md
+      - Model Context Protocols:
+          - Overview: ai/model-context-protocols/overview.md
+          - Use Cases: ai/model-context-protocols/use-cases.md
+          - Sample AI Application: ai/model-context-protocols/Sample AI-Application-with-MCP.md
   - Blog:
       - 2025-06-01: blog/2025-06-01-why-event-driven-architecture-scales.md
